@@ -8,7 +8,7 @@ filename: README.md
   
 ## Example Output
 
-![](/Users/loga8761/github/Heatmap/heatmap.png)
+![](heatmap.png)
 
 ## Summary
 
