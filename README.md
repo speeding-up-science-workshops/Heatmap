@@ -14,7 +14,7 @@ filename: README.md
 
    - This visualization produces a clustered heatmap
    - Input: Log transformed normalized gene expression data
-   - This heatmap clusters genes by  expression patterns. This enables the user to look for similarities in expression profiles across samples.
+   - A heatmap enables you to look for similarities in expression profiles across samples.
  - For more info on heatmaply, go here:
  https://github.com/talgalili/heatmaply
  
