@@ -1,0 +1,58 @@
+---
+title: "heatmap"
+author: "Cheryl Logan"
+date: "10/25/2019"
+output: html_document
+---
+
+## Make a heatmap using heatmaply
+
+Install necessary packages and load libraries. You only need to install the  packages once, but load libraries every time you open up a new R session.
+
+```{r, eval = FALSE}
+library(tidyverse) # after install.packages('tidyverse')
+library(ggplot2)   # after install.packages('ggplot2')
+library(heatmaply) # after install.packages('heatmaply')
+```
+
+Display working directory (equivalent of pwd in terminal) & change the working directory to location of your log transformed gene expression data file
+```{r, eval = FALSE}
+#getwd()
+#setwd("/Users/path/to/your/library")
+```
+
+Load expression data (use log2 centered data)
+```{r, }
+fullgenelist <- read_csv("limma-voom_normalised_counts.csv")
+# example data from DOI:10.5281/zenodo.2529926
+
+fullgenelist <- select(fullgenelist,-ENTREZID,-GENENAME)
+
+#subset full genelist to look for patterns
+fullgenelist <- slice(fullgenelist,1:100) 
+head(fullgenelist)
+```
+
+Make heatmap using heatmaply
+
+```{r, }
+#heatmaply(mtcars)
+heatmaply(fullgenelist)
+```
+You can save an interactive version of your heatmaply into an HTML file using the following code:
+```{r}
+dir.create("folder")
+library(heatmaply)
+heatmaply(fullgenelist, file = "folder/heatmaply_plot.html")
+browseURL("folder/heatmaply_plot.html")
+```
+
+Similar code can be used for saving a static file (png/jpeg/pdf)
+```{r}
+dir.create("folder")
+library(heatmaply)
+# Before the first time using this code you may need to first run:
+# webshot::install_phantomjs()
+heatmaply(fullgenelist, file = "folder/heatmaply_plot.png")
+browseURL("folder/heatmaply_plot.png")
+```
