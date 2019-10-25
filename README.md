@@ -1,6 +1,5 @@
 Heatmap
 ====
-filename: README.md
 
 ## Quick Start
 
@@ -29,6 +28,6 @@ filename: README.md
 
 Zenodo Binder, doi: LINK_TO_BINDER
 
-Github Binder: LINK_TO_BINDER
+Github Binder: https://mybinder.org/v2/gh/clogan88/Heatmap.git/master?urlpath=RStudio
 
 Github Repository: https://github.com/speeding-up-science-workshops/<REPO_NAME>
