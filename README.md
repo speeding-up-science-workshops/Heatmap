@@ -1,6 +1,8 @@
 Heatmap
 ====
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/speeding-up-science-workshops/Heatmap/master?urlpath=Rstudio)
+
 ## Quick Start
 
   - Open the binder and then click "knit"
